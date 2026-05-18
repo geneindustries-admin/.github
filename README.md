@@ -207,3 +207,95 @@ This organisation is designed to support:
 - Hundreds of customer projects
 
 This is intended to operate as professional long-term business infrastructure.
+
+
+# Identity & Access Rules
+
+Gene Industries uses an identity-first infrastructure model.
+
+Every person must have:
+- Their own company email
+- Their own password manager account
+- Their own GitHub account
+- Their own MFA/2FA setup
+
+No shared logins are allowed.
+
+---
+
+## Company Email Rule
+
+All business systems must use company-managed email addresses.
+
+Examples:
+- gene@geneindustries.org
+- bob@geneindustries.org
+- david@huanglee.org
+
+NOT:
+- bob123@gmail.com
+- randomhotmail@hotmail.com
+
+Personal emails are only used for:
+- recovery
+- backup communication
+- emergency contact
+
+---
+
+## GitHub Rules
+
+Each user creates their OWN GitHub account using their company email.
+
+Example:
+- Username: genehuang-ai
+- Email: gene@geneindustries.org
+
+The user is then invited into the GitHub organization.
+
+Users must NEVER share GitHub passwords.
+
+---
+
+## 1Password Rules
+
+Each user receives:
+- their own 1Password account
+- their own master password
+- their own MFA
+
+Administrators should never know employee master passwords.
+
+Vault access is granted based on role.
+
+Example:
+- Developers → Development vaults
+- Finance → Finance vaults
+- Executives → Infrastructure vaults
+
+---
+
+## Offboarding Rule
+
+When someone leaves:
+1. Suspend Google Workspace account
+2. Remove GitHub organization access
+3. Disable 1Password access
+4. Rotate critical credentials if required
+
+This ensures systems remain secure without manually changing every password.
+
+---
+
+## Why This Structure Exists
+
+This structure allows Gene Industries to scale cleanly:
+- employees
+- contractors
+- clients
+- AI developers
+- customer projects
+- automation systems
+- hundreds of repositories
+
+without becoming disorganized or insecure.
